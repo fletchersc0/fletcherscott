@@ -44,6 +44,11 @@
       border-bottom: 1px solid #000;
       padding-bottom: .5rem;
     }
+
+    /* —— extra space between paragraphs in About section —— */
+    #about-section p {
+      margin-bottom: 1.5em;
+    }
   </style>
 </head>
 <body>
@@ -72,15 +77,11 @@
       <section id="about-section">
         <h2>About</h2>
         <p><strong>PhD Candidate RMIT University & ARC Centre for Excellence in Automated Decision-Making and Society (ADM+S)</strong></p>
-        <p>
         <p><strong>Casual Sessional Tutor for Psychology | Computational Models of Cognition | Resource-Rational Sequential Learning | Human-Computer Interaction</strong></p>
-        <p>
         <p>I research how people process information. My current interest is in how processing specifically applies to political messages, especially those designed to mislead or provoke strong emotions. Currently, I am mapping how the order and repetition of messages, such as what shows up first or later, as well as how ideas cluster over time, changes the mental effort people devote to evaluating claims. By pinpointing these moments, information systems could critically place nudges or fact-checks exactly where they can trigger closer scrutiny.</p>
-        <p>
-        <p>
-        The approach is to assess how computational models can be used to infer users’ real-time processing (e.g. how quickly they skim, when they slow down, and which cues grab their attention). Embedding a model of the learner into information platforms paves the way for adaptive systems that tailor corrections, explanations, or practice material to the moment a person is most receptive, turning generic facts into personalized learning aids.
-        </p>
+        <p>The approach is to assess how computational models can be used to infer users’ real-time processing (e.g. how quickly they skim, when they slow down, and which cues grab their attention). Embedding a model of the learner into information platforms paves the way for adaptive systems that tailor corrections, explanations, or practice material to the moment a person is most receptive, turning generic facts into personalized learning aids.</p>
       </section>
+
       <section id="sec1"><h2>Advanced Bayesian Study (2025)</h2><p>Resource-rational Bayesian models applied to belief updating under uncertainty, improving predictive performance.</p></section>
       <section id="sec2"><h2>Papyrus Prototype (2024)</h2><p>Decomposed academic articles into Units of Knowledge for dynamic synthesis in a recommender system prototype.</p></section>
       <section id="sec3"><h2>Teaching Launch (2023)</h2><p>Introduced a computational modeling course with Bayesian inference labs for undergraduate psychology.</p></section>
@@ -94,6 +95,7 @@
       <section id="sec11"><h2>Tutorial Series (2016)</h2><p>Delivered tutorials on Bayesian analysis for psychology researchers, covering R and Python implementations.</p></section>
     </article>
   </main>
+
   <script>
     const links = document.querySelectorAll('#index a');
     const pane = document.getElementById('content');
