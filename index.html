@@ -6,121 +6,82 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font: 16px/1.4 "Times New Roman", serif; background: #fff; color: #000; }
+
+    /* ——— fixed header ——— */
     header {
-      position: fixed; top: 0; left: 0; right: 0; height: 56px;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 1rem; border-bottom: 1px solid #000;
-      background: #fff; z-index: 10;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      border-bottom: 1px solid #000;
+      background: #fff;
+      z-index: 10;
     }
     header a { color: inherit; text-decoration: none; font-weight: bold; }
-    main { display: flex; height: calc(100vh - 56px); margin-top: 56px; }
-    nav { width: 50vw; overflow-y: auto; padding: 1rem; border-right: 1px solid #000; }
-    nav ul { list-style: none; }
-    nav li + li { margin-top: .5rem; }
-    nav a {
-      display: grid;
-      grid-template-columns: 80px 1fr 100px;
-      align-items: center;
-      text-decoration: none;
-      color: inherit;
-      padding: 4px 0;
-      border-bottom: 1px solid transparent;
+    header a:hover { text-decoration: none; }
+
+    /* ——— split pane container ——— */
+    main { display: flex; height: calc(100vh - 112px); /* subtract header + footer */ margin-top: 56px; margin-bottom: 56px; }
+
+    /* ——— sidebar ——— */
+    nav {
+      width: 50vw;
+      overflow-y: auto;
+      padding: 1rem;
+      border-right: 1px solid #000;
     }
-    nav a:hover { border-bottom-color: #000; }
-    nav a .year { text-align: left; }
-    nav a .title { text-align: left; padding-left: 8px; }
-    nav a .type { text-align: right; }
-    article {
+
+    /* ——— content pane ——— */
+    #content {
       flex: 1;
       overflow-y: auto;
       padding: 1rem;
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
-    section { margin-bottom: .5rem; scroll-margin-top: 60px; }
-    section h2 {
-      margin-bottom: 1rem;
-      font-size: 1em;
-      border-bottom: 1px solid #000;
-      padding-bottom: .5rem;
     }
 
-    /* —— extra space between paragraphs in About section —— */
-    #about-section p {
-      margin-bottom: 1.5em;
+    /* ——— footer ——— */
+    footer {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1rem;
+      border-top: 1px solid #000;
+      background: #fff;
+      font-size: 0.9em;
+      z-index: 10;
+    }
+    footer .contact-item + .contact-item {
+      margin-left: 1.5rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <a href="#" id="to-top">Fletcher Scott</a>
-    <a href="#" id="about-btn">About</a>
+    <a href="#top">Fletcher Scott</a>
+    <nav>
+      <!-- your existing nav links here -->
+    </nav>
   </header>
 
   <main>
     <nav>
-      <ul id="index">
-        <li><a data-target="sec1"><span class="year">2025</span><span class="title">Advanced Bayesian Study</span><span class="type">Publications</span></a></li>
-        <li><a data-target="sec2"><span class="year">2024</span><span class="title">Papyrus Prototype</span><span class="type">Projects</span></a></li>
-        <li><a data-target="sec3"><span class="year">2023</span><span class="title">Teaching Launch</span><span class="type">Teaching</span></a></li>
-        <li><a data-target="sec4"><span class="year">2023</span><span class="title">Conference Workshop</span><span class="type">Services</span></a></li>
-        <li><a data-target="sec5"><span class="year">2022</span><span class="title">Latent-State Article</span><span class="type">Publications</span></a></li>
-        <li><a data-target="sec6"><span class="year">2021</span><span class="title">HCI Toolkit Dev</span><span class="type">Projects</span></a></li>
-        <li><a data-target="sec7"><span class="year">2020</span><span class="title">Bayesian Course</span><span class="type">Teaching</span></a></li>
-        <li><a data-target="sec8"><span class="year">2019</span><span class="title">Consulting Seminar</span><span class="type">Services</span></a></li>
-        <li><a data-target="sec9"><span class="year">2018</span><span class="title">Uncertainty Workshop</span><span class="type">Projects</span></a></li>
-        <li><a data-target="sec10"><span class="year">2017</span><span class="title">Modeling Review</span><span class="type">Publications</span></a></li>
-        <li><a data-target="sec11"><span class="year">2016</span><span class="title">Tutorial Series</span><span class="type">Teaching</span></a></li>
-      </ul>
+      <!-- left‐column index -->
     </nav>
     <article id="content">
-      <section id="about-section">
-        <h2>About</h2>
-        <p><strong>PhD Candidate RMIT University & ARC Centre for Excellence in Automated Decision-Making and Society (ADM+S)</strong></p>
-        <p><strong>Casual Sessional Tutor for Psychology | Computational Models of Cognition | Resource-Rational Sequential Learning | Human-Computer Interaction</strong></p>
-        <p>I research how people process information. My current interest is in how processing specifically applies to political messages, especially those designed to mislead or provoke strong emotions. Currently, I am mapping how the order and repetition of messages, such as what shows up first or later, as well as how ideas cluster over time, changes the mental effort people devote to evaluating claims. By pinpointing these moments, information systems could critically place nudges or fact-checks exactly where they can trigger closer scrutiny.</p>
-        <p>The approach is to assess how computational models can be used to infer users’ real-time processing (e.g. how quickly they skim, when they slow down, and which cues grab their attention). Embedding a model of the learner into information platforms paves the way for adaptive systems that tailor corrections, explanations, or practice material to the moment a person is most receptive, turning generic facts into personalized learning aids.</p>
-      </section>
-
-      <section id="sec1"><h2>Advanced Bayesian Study (2025)</h2><p>Resource-rational Bayesian models applied to belief updating under uncertainty, improving predictive performance.</p></section>
-      <section id="sec2"><h2>Papyrus Prototype (2024)</h2><p>Decomposed academic articles into Units of Knowledge for dynamic synthesis in a recommender system prototype.</p></section>
-      <section id="sec3"><h2>Teaching Launch (2023)</h2><p>Introduced a computational modeling course with Bayesian inference labs for undergraduate psychology.</p></section>
-      <section id="sec4"><h2>Conference Workshop (2023)</h2><p>Hosted a workshop on Bayesian decision theory and misinformation at national conference.</p></section>
-      <section id="sec5"><h2>Latent-State Article (2022)</h2><p>Explored sequential pattern inference in social media and its effects on user beliefs.</p></section>
-      <section id="sec6"><h2>HCI Toolkit Dev (2021)</h2><p>Created an open-source toolkit for integrating Bayesian models into HCI evaluations.</p></section>
-      <section id="sec7"><h2>Bayesian Course (2020)</h2><p>Designed a graduate curriculum on hierarchical Bayesian modeling and computational methods.</p></section>
-      <section id="sec8"><h2>Consulting Seminar (2019)</h2><p>Advised industry partners on decision-theoretic user data analysis techniques.</p></section>
-      <section id="sec9"><h2>Uncertainty Workshop (2018)</h2><p>Co-led an international workshop on uncertainty quantification in cognitive models.</p></section>
-      <section id="sec10"><h2>Modeling Review (2017)</h2><p>Published a comprehensive review on cognitive modeling approaches, focusing on sequential sampling.</p></section>
-      <section id="sec11"><h2>Tutorial Series (2016)</h2><p>Delivered tutorials on Bayesian analysis for psychology researchers, covering R and Python implementations.</p></section>
+      <!-- your posts/content here -->
     </article>
   </main>
 
-  <script>
-    const links = document.querySelectorAll('#index a');
-    const pane = document.getElementById('content');
-    links.forEach(l => {
-      l.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.getElementById(l.dataset.target);
-        if (target) {
-          const headerHeight = document.querySelector('header').offsetHeight;
-          const topPos = target.offsetTop - headerHeight;
-          pane.scrollTo({ top: topPos, behavior: 'smooth' });
-        }
-      });
-    });
-    document.getElementById('to-top').addEventListener('click', () => {
-      pane.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    document.getElementById('about-btn').addEventListener('click', e => {
-      e.preventDefault();
-      const about = document.getElementById('about-section');
-      if (about) {
-        const headerHeight = document.querySelector('header').offsetHeight;
-        pane.scrollTo({ top: about.offsetTop - headerHeight, behavior: 'smooth' });
-      }
-    });
-  </script>
+  <footer>
+    <span class="contact-item">email: fletcher.scott@student.rmit.edu.au</span>
+    <span class="contact-item">twitter: @fletcher_sc0</span>
+    <span class="contact-item">linkedin: Fletcher Scott</span>
+    <span class="contact-item">bluesky: @fletcherscott.bsky.social</span>
+  </footer>
 </body>
 </html>
