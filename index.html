@@ -106,10 +106,13 @@
   <main>
     <nav>
       <ul id="index">
-        <li><a data-target="sec1"><span class="year">2025</span><span class="title">Deployment of attention and memory on social media</span><span class="type">Project</span></a></li>
+        <li><a data-target="sec1"><span class="year">2025</span><span class="title">Statistical Learning in Noisy Feeds: How Information Environments Drive Attention, Memory, and Polarized Beliefs</span><span class="type">Theory</span></a></li>
         <li><a data-target="sec2"><span class="year">2025</span><span class="title">Papyrus</span><span class="type">Development</span></a></li>
         <li><a data-target="sec3"><span class="year">2025</span><span class="title">NeuroPhysIIR’25</span><span class="type">Workshop</span></a></li>
         <li><a data-target="sec4"><span class="year">2025</span><span class="title">Semester 1: Psychology of Everyday Thinking</span><span class="type">Teaching</span></a></li>
+        <li><a data-target="sec12"><span class="year">2025</span><span class="title">Centering neurophysiological research in IR on characterizing the binding of structure within and across tasks</span><span class="type">Framework</span></a></li>
+        <li><a data-target="sec13"><span class="year">2025</span><span class="title">EngineEarth.io</span><span class="type">Project</span></a></li>
+        <li><a data-target="sec14"><span class="year">2025</span><span class="title">Dataset Sentiment Classifier for Experimental Stimuli</span><span class="type">Tool</span></a></li>
         <li><a data-target="sec5"><span class="year">2024</span><span class="title">Inconsistent Beliefs, Consistent Partisanship (2024)</span><span class="type">Pre-Print</span></a></li>
         <li><a data-target="sec6"><span class="year">2024</span><span class="title">PhD Milestone 1</span><span class="type">Overview</span></a></li>
         <li><a data-target="sec7"><span class="year">2023</span><span class="title">PhD Proposal</span><span class="type">Teaching</span></a></li>
@@ -130,27 +133,80 @@
       </section>
 
       <section id="sec1">
-        <h2>Deployment of attention and memory on social media: an integrative review of latent-state learning for misinformation and affective polarization (2025)</h2>
-        <p><strong> This is a drafted theoretical paper submitted to Media and Communications on the 12th of May 2025.</strong></p>
-        <p>Digital resilience relies on users' ability to resist credibility distortions when crisis narratives flood social feeds, heightening uncertainty and pushing people to lean on prior expectations as cognitive shortcuts. These expectations alter how people process information, shaping early perceptual encoding and higher-order veracity judgments to foster acceptance and defence of misinformation. While such heuristics are viewed as resource-efficient adaptations, their role in polarization and veracity perception remain poorly understood.</p>
-        <p>We recast these biases within a latent-state framework in which the brain infers hidden causal structures from sequential input and re-uses them to minimize prediction error. Transferring predictions from familiar states to novel contexts streamlines inference but is likely to lead to polarized perspectives on news. Sequenced, consistently patterned feeds on social media provide the structured input that latent-cause mechanisms exploit, allowing users to infer hidden generative factors implicitly and carry those inferences into new contexts. Consequently, users give priority to messages marked by ingroup signals or high perceptual fluency in a way that deepens partisan divides.</p>
-        <p>This project advances an empirical protocol for studying biased information use in dynamic, digitally mediated environments that (i) tracks latent-state formation with sequential Bayesian modelling, (ii) tests whether social alignment and emotional valence serve as hidden dimensions that gate information uptake, and (iii) identifies candidate neural substrates. Situating polarization within normative latent-state inference yields testable approaches for developing interventions that may strengthen resilience to political polarization while preserving cognitive efficiency.</p>
+        <h2>Statistical Learning in Noisy Feeds: How Information Environments Drive Attention, Memory, and Polarized Beliefs (2025)</h2>
+        <p>In the digital world, people often have to distinguish critical information from surrounding “noise”, a task that is widely recognized as cognitively demanding. Here we argue that this is addressed by utilizing aspects of the human belief-updating system that evolved to simplify environmental inputs, but that it may have unintended consequences for exacerbating polarization and increasing susceptibility to misinformation. Modern information environments are frequently characterized by an overabundance of perspectives, most of which bear little practical relevance to their goals. The problem of determining credibility in such environments is that it must be solved by a limited cognitive system that evolved to infer and minimize the potential hidden causes for observed stimuli. We recast this problem within a latent-state framework to propose that sequenced, consistently patterned feeds on social media provide exactly the structured input that latent-cause mechanisms exploit, allowing users to infer hidden generative factors in the environment implicitly and carry those prior inferences into the perception of specific information items. Consequently, this perceptual fluency may mean that users give priority to messages marked by ingroup signals in a way that deepens partisan divides. Building on previous work linking the processing of social information to frameworks of resource-rational cognition, we argue that the answers to these questions have implications not just for the study of information processing. They are also significant for the development and broad awareness of the impacts of sequential recommender systems, and the role of personalized news feeds and fact-checking dashboards in in perceptions of credibility and belief-updating. This paper advances an empirical protocol for studying biased information use in dynamic, digitally mediated environments.</p>
       </section>
 
-      <section id="sec2"><h2>Papyrus Prototype (2025)</h2>
+      <section id="sec2">
+        <h2>Papyrus Prototype (2025)</h2>
         <p><strong> This is an ongoing project in collaboration with Jack Byrnes.</strong></p>
         <p>The scholarly record is increasingly fragemented: more than four million peer-reviewed papers now appear each year, yet mismatched metadata, discipline-specific jargon, and paywalls hinder efficient discovery. When the volume of information volume overwhlems a finite capacity, researchers must either spend months undertaking cross-disciplinary syntheses or retreat into an ever-narrower niche, fueling professional fatigue and the well-documented reasoning errors that accompany cognitive overload.</p>
         <p>We re-frame this crisis as a tractable machine-learning problem. Transformer-based language models embed full-text articles in a shared semantic space, while citation graphs add complementary topological cues. Together these representations can automatically surface convergent findings, flag near-replications, and spotlight neglected intersections. Each of these tasks currently overwhelm manual review. Layering an adaptive recommender that infers a reader’s evolving goals yields the benefit of passive discovery of high-utility papers as well as an explicit push toward serendipity, both measurable with standard ranked-retrieval and diversity metrics.</p>
         <p><em>Papyrus</em> is a desktop and mobile platform that atomises every article into fine-grained Units of Knowledge, or minimal, context-free propositions expressed in subject-predicate-object form. Each Unit inherits its parent article’s embedding, enabling intra-paper summarisation and inter-paper synthesis through a two-stage pipeline (predicate-argument extraction followed by cosine-similarity clustering). Granularity adapts to expertise: novices see high-level explanatory Units, while domain experts receive technical Units that reveal citation pathways and unresolved contradictions.</p>
-      <section id="sec3"><h2>International Workshop on NeuroPhysiological Approaches for Interactive Information Retrieval (2025)</h2><p> Attended and participated in the report on the International Workshop on NeuroPhysiological Approaches for Interactive Information Retrieval at ACM SIGIR CHIIR 2025 (NeuroPhysIIR’25).</p></section>
-      <section id="sec4"><h2>Semester 1: Psychology of Everyday Thinking (2025)</h2><p>Began tutoring the course Psychology of Everyday Thinking for the first time, at the City Campus of RMIT University.</p></section>
-      <section id="sec5"><h2>Inconsistent Beliefs, Consistent Partisanship (2024)</h2><p>Description.</p></section>
-      <section id="sec6"><h2>PhD Milestone 1 (2025)</h2><p>Description.</p></section>
-      <section id="sec7"><h2>PhD Proposal (2023)</h2><p>Description.</p></section>
-      <section id="sec8"><h2>Consulting Seminar (2019)</h2><p>Advised industry partners on decision-theoretic user data analysis techniques.</p></section>
-      <section id="sec9"><h2>Uncertainty Workshop (2018)</h2><p>Co-led an international workshop on uncertainty quantification in cognitive models.</p></section>
-      <section id="sec10"><h2>Modeling Review (2017)</h2><p>Published a comprehensive review on cognitive modeling approaches, focusing on sequential sampling.</p></section>
-      <section id="sec11"><h2>Tutorial Series (2016)</h2><p>Delivered tutorials on Bayesian analysis for psychology researchers, covering R and Python implementations.</p></section>
+      </section>
+
+      <section id="sec3">
+        <h2>International Workshop on NeuroPhysiological Approaches for Interactive Information Retrieval (2025)</h2>
+        <p>Attended and participated in the report on the International Workshop on NeuroPhysiological Approaches for Interactive Information Retrieval at ACM SIGIR CHIIR 2025 (NeuroPhysIIR’25).</p>
+      </section>
+
+      <section id="sec4">
+        <h2>Semester 1: Psychology of Everyday Thinking (2025)</h2>
+        <p>Began tutoring the course Psychology of Everyday Thinking for the first time, at the City Campus of RMIT University.</p>
+      </section>
+
+      <section id="sec12">
+        <h2>Centering neurophysiological research in IR on characterizing the binding of structure within and across tasks (2025)</h2>
+        <p>Although users commonly approach search interfaces with an articulated need, their interactions are continually influenced by underlying affective and motivational states. Moment-to-moment fluctuations in mood, arousal, and transient goals recruit large-scale neural networks, subtly directing attention allocation and balancing exploratory versus exploitative information-seeking behaviors, often prior to conscious awareness. Currently, human-information interaction (HII) research lacks robust behavioral or physiological indicators capable of pinpointing the onset of these internal states or quantifying their effects on information sampling decisions, thereby obscuring critical variance sources in user performance and satisfaction. This paper proposes that user actions are deeply contingent upon both the task environment and the cognitive models users construct about that environment, which together define the range of perceived appropriate actions. The constraints imposed by these task environments actively shape neural structure and activity patterns, influencing information processing. Conceptualizing information retrieval (IR) from the user's perspective as a resource-rational predictive inference problem, we propose that the brain continually updates beliefs based on new experiences to predict future outcomes. However, the full set of decision-process parameters driving task interaction is challenging to capture with behavioral data alone. By integrating well-characterized neurophysiological signatures of decision formation, we present a comprehensive framework that both constructs and constrains decision models. This approach highlights a critical consideration, that determining whether task adaptation occurs primarily within the brain or within the task environment itself carries significant implications for cognitive neuroscience methodologies and their application in optimizing HII.</p>
+      </section>
+
+      <section id="sec13">
+        <h2>EngineEarth.io (2025)</h2>
+        <p>EarthEngine.io is a browser extension that visualizes the environmental cost of everyday digital activity. Every time a user searches the web or uses AI tools, it impacts a digital forest, trees are cut down, and a furnace burns, measuring the energy and environmental resources consumed.</p>
+        <p>The forest reflects a user’s digital footprint in real time. But users are also empowered to counteract this by donating to ecological charities, and so they can regenerate their forest and watch trees grow back, skies clear, and wildlife return.</p>
+        <p>This project acts as a participatory artwork, interactive data visualizer, and behavioural feedback tool. EarthEngine.io visualizes emissions and ties restoration to everyday behaviour. The result is a responsive forest that makes people’s environmental data personal and changeable.</p>
+        <p>“I love gardening. It’s great to walk out every day and see the little changes around me. But I’m also forgetful. It’s really easy to forget. The day goes by so quickly, and there’s always something more important right there in my face, so the little things get delayed over and over. I don’t water my plants. I don’t check the soil.</p>
+        <p>I’m realizing it might be because the garden grows at a pace I simply don’t live on. It’s like when a slow driver is there in the right lane, and they’re going the speed limit, but I still feel that anger in me, like they’re personally trying to delay me from a pace that I defined. The garden is the same. Its so slow and I want results at the moment I want them.</p>
+        <p>It reminds while I’m writing this. I want to be more kind. I want to be a better person. I’m fighting every day to be better, fighting myself and other people. I get so confronted and offended when things are different from how I want them to be. I kick and I scream and I think, “other people would stomp on me if they had the chance to get ahead”. What am I doing? There I see a scared, vulnerable person.</p>
+        <p>But then, I start to think, maybe that scared, vulnerable person is in me, maybe even the world’s most powerful people. We all find it funny when a billionaire tries to play the victim, when they’re churning through resources at a speed most of us simply can’t comprehend. I am beginning to think they simply just forget. The world is so big. I can’t remember where I keep things in the house, so how am I meant to know where the clutter of what are global choices end up down the line? We practice our little tasks over and over and we get so good at them, that is almost impossible to be confronted by a system that would run things a different from that, or at a different pace.</p>
+        <p>I want to honour that person driving slow and the old lady fumbling with her coins and looking the cashier straight in the eye. I don’t want our acquisition of skills to plan for the obsolescence of basic kindness and the quiet million-year long process of which we are all a part of. This is my round-about way of saying that I wanted to present an attempt at slowing things down, which I believe people need, including myself. Here’s a garden for you. And when you tend to that garden, I want you to ask: what would it have meant to wake up with the rain pooling in your eyes, the fresh moisture on your skin and the smell of the forest on your nose. I ache to know myself, I have ached perhaps for 2000 years or more. But maybe we are far from that now.” – Artist Statement</p>
+      </section>
+
+      <section id="sec14">
+        <h2>Dataset Sentiment Classifier for Experimental Stimuli</h2>
+        <p>A new protocol is emerging in misinformation research that aims to improve the rigor of stimulus design. But pretesting statements for emotional or categorical content is often costly and places an undue burden on participants, who have to repeatedly evaluate large sets of stimuli simply to verify that they meet predefined criteria.</p>
+        <p>As a preliminary solution, machine learning offers a promising route for approximating human-like text perceptions. I’ve developed a simple tool on Kaggle that allows researchers to upload a dataset of statements and receive outputs categorizing each one by emotional sentiment and its intensity. Essentially, it serves as a user-friendly interface for psychological researchers without a technical background, providing access to a sentiment classifier without requiring extensive coding.</p>
+        <p>Warning: this method has not yet been validated against established psychological measures at the time of writing. Perhaps a future PhD project could take this further? Someone, pick it up! (kaggle link)</p>
+      </section>
+
+      <section id="sec5">
+        <h2>Inconsistent Beliefs, Consistent Partisanship (2024)</h2>
+        <p>Description.</p>
+      </section>
+      <section id="sec6">
+        <h2>PhD Milestone 1 (2025)</h2>
+        <p>Description.</p>
+      </section>
+      <section id="sec7">
+        <h2>PhD Proposal (2023)</h2>
+        <p>Description.</p>
+      </section>
+      <section id="sec8">
+        <h2>Consulting Seminar (2019)</h2>
+        <p>Advised industry partners on decision-theoretic user data analysis techniques.</p>
+      </section>
+      <section id="sec9">
+        <h2>Uncertainty Workshop (2018)</h2>
+        <p>Co-led an international workshop on uncertainty quantification in cognitive models.</p>
+      </section>
+      <section id="sec10">
+        <h2>Modeling Review (2017)</h2>
+        <p>Published a comprehensive review on cognitive modeling approaches, focusing on sequential sampling.</p>
+      </section>
+      <section id="sec11">
+        <h2>Tutorial Series (2016)</h2>
+        <p>Delivered tutorials on Bayesian analysis for psychology researchers, covering R and Python implementations.</p>
+      </section>
     </article>
   </main>
 
