@@ -120,6 +120,18 @@
       height: auto;
       border-radius: 5px;
     }
+    
+    /* Link styling */
+    a.project-link {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      transition: text-decoration-style 0.3s;
+    }
+    
+    a.project-link:hover {
+      text-decoration-style: solid;
+    }
   </style>
 </head>
 <body>
@@ -211,7 +223,7 @@
         <h2>Dataset Sentiment Classifier for Experimental Stimuli</h2>
         <p>A new protocol is emerging in misinformation research that aims to improve the rigor of stimulus design. But pretesting statements for emotional or categorical content is often costly and places an undue burden on participants, who have to repeatedly evaluate large sets of stimuli simply to verify that they meet predefined criteria.</p>
         <p>As a preliminary solution, machine learning offers a promising route for approximating human-like text perceptions. I've developed a simple tool on Kaggle that allows researchers to upload a dataset of statements and receive outputs categorizing each one by emotional sentiment and its intensity. Essentially, it serves as a user-friendly interface for psychological researchers without a technical background, providing access to a sentiment classifier without requiring extensive coding.</p>
-        <p>Warning: this method has not yet been validated against established psychological measures at the time of writing. Perhaps a future PhD project could take this further? Someone, pick it up! (kaggle link)</p>
+        <p>Warning: this method has not yet been validated against established psychological measures at the time of writing. Perhaps a future PhD project could take this further? Someone, pick it up! <a href="https://www.kaggle.com/code/fletcherscott/statement-sentiment-classifier" target="_blank" class="project-link">Access the tool on Kaggle</a></p>
       </section>
 
       <section id="sec5">
@@ -224,7 +236,13 @@
       </section>
       <section id="sec7">
         <h2>PhD Proposal (2023)</h2>
-        <p>Description.</p>
+        <p>Relevance and credibility are shaped by the information environments people inhabit and the noise they encounter. Information environments range from feeds that consistently surprise the user to those that consistently affirm them, each altering attention and memory systems in distinct ways. Previous research has shown that noise, defined as inconsistent or distracting information, can disrupt attention, increase cognitive load, and reduce efficiency.</p>
+
+        <p>As algorithms increasingly become the main source of information globally, it is essential to investigate how the structure these algorithms impose on information affects the way individuals maintain and revise their beliefs, accounting for the varying presence of noise in these feeds. Understanding how these varying environments impact perception is key to unraveling the cognitive and neural mechanisms involved in human-information interaction.</p>
+
+        <p>The primary aim of this topic is to explore the relationship between different information environments and their impact on perceptions of credibility. Specifically, it seeks to investigate how various sequences affect information processing and beliefs regarding the specific information being sequenced. This is to examine the potentially disruptive effects of noise during credibility judgements and maintenance of states of cognitive control.</p>
+
+        <p>Previous research has revealed adaptive strategies employed by the meta-cognitive system in noisy environments. But as of yet, it is unknown whether these strategies are also utilized in algorithmically sequenced news information, potentially explaining key findings in studies of misinformation and the susceptibility of people to polarized narratives when such narratives confirm existing beliefs. These investigations seek to contribute to the body of literature tasked with developing strategies to moderate credibility perception in diverse information settings.</p>
       </section>
       <section id="sec8">
         <h2>Consulting Seminar (2019)</h2>
