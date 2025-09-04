@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Fletcher Scott</title>
   <style>
     /* Root color variables */
@@ -44,12 +44,8 @@
       display: flex; gap: 1rem; font-size: 0.9em;
     }
     footer .toggler {
-      background: none;
-      border: none;
-      font-size: 1.2em;
-      cursor: pointer;
-      color: inherit;
-      margin-left: auto;
+      background: none; border: none; font-size: 1.2em;
+      cursor: pointer; color: inherit; margin-left: auto;
     }
 
     main { display: flex; height: calc(100vh - 112px); margin-top: 56px; margin-bottom: 56px; }
@@ -58,7 +54,7 @@
     nav li + li { margin-top: .5rem; }
     nav a {
       display: grid;
-      grid-template-columns: 80px 1fr 100px;
+      grid-template-columns: 80px 1fr 120px;
       align-items: center;
       text-decoration: none;
       color: inherit;
@@ -71,67 +67,37 @@
     nav a .type { text-align: right; }
 
     article {
-      flex: 1;
-      overflow-y: auto;
-      padding: 1rem;
-      scroll-behavior: smooth;
-      font-size: 16px;
-      text-align: justify; /* Added justified text */
+      flex: 1; overflow-y: auto; padding: 1rem;
+      scroll-behavior: smooth; font-size: 16px; text-align: justify;
     }
     section { margin-bottom: .5rem; scroll-margin-top: 60px; }
     section h2 {
-      margin-bottom: 1rem;
-      font-size: 1em;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: .5rem;
+      margin-bottom: 1rem; font-size: 1em;
+      border-bottom: 1px solid var(--border-color); padding-bottom: .5rem;
       transition: border-color 0.3s;
     }
 
-    /* —— extra space between paragraphs in About section —— */
-    #about-section p {
-      margin-bottom: 1.5em;
-    }
+    /* Space between paragraphs */
+    #about-section p { margin-bottom: 1.5em; }
+    article section p { margin-bottom: 1.5em; }
 
-    /* —— Option B: give all other sections the same spacing —— */
-    article section p {
-      margin-bottom: 1.5em;
-    }
-    
     /* Bio layout with image */
-    .bio-container {
-      display: flex;
-      margin: 1.5em 0;
-      gap: 2em;
-    }
-    
-    .bio-text {
-      flex: 3;
-    }
-    
-    .bio-image {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-start;
-    }
-    
-    .headshot {
-      width: 180px;
-      height: auto;
-      border-radius: 5px;
-    }
-    
+    .bio-container { display: flex; margin: 1.5em 0; gap: 2em; }
+    .bio-text { flex: 3; }
+    .bio-image { flex: 1; display: flex; justify-content: flex-end; align-items: flex-start; }
+    .headshot { width: 180px; height: auto; border-radius: 5px; }
+
     /* Link styling */
     a.project-link {
-      color: inherit;
-      text-decoration: underline;
-      text-decoration-style: dotted;
+      color: inherit; text-decoration: underline; text-decoration-style: dotted;
       transition: text-decoration-style 0.3s;
     }
-    
-    a.project-link:hover {
-      text-decoration-style: solid;
-    }
+    a.project-link:hover { text-decoration-style: solid; }
+
+    /* Media helpers */
+    figure { margin: 1em 0; }
+    figure img { max-width: 100%; height: auto; display: block; }
+    figure figcaption { font-size: 0.9em; text-align: center; margin-top: .5em; }
   </style>
 </head>
 <body>
@@ -143,79 +109,87 @@
   <main>
     <nav>
       <ul id="index">
-        <li><a data-target="sec15"><span class="year">2025</span><span class="title">Every Idea Ever /Hr</span><span class="type">Art</span></a></li>
-        <li><a data-target="sec1"><span class="year">2025</span><span class="title">Statistical Learning in Noisy Feeds: How Information Environments Drive Attention, Memory, and Polarized Beliefs</span><span class="type">Theory</span></a></li>
-        <li><a data-target="sec2"><span class="year">2025</span><span class="title">Papyrus</span><span class="type">Development</span></a></li>
-        <li><a data-target="sec3"><span class="year">2025</span><span class="title">NeuroPhysIIR'25</span><span class="type">Workshop</span></a></li>
-        <li><a data-target="sec4"><span class="year">2025</span><span class="title">Semester 1: Psychology of Everyday Thinking</span><span class="type">Teaching</span></a></li>
-        <li><a data-target="sec12"><span class="year">2025</span><span class="title">Centering neurophysiological research in human–computer interaction on characterizing the binding of structure within and across tasks</span><span class="type">Framework</span></a></li>
-        <li><a data-target="sec13"><span class="year">2025</span><span class="title">EngineEarth.io</span><span class="type">Nudge</span></a></li>
-        <li><a data-target="sec14"><span class="year">2025</span><span class="title">Dataset Sentiment Classifier for Experimental Stimuli</span><span class="type">Tool</span></a></li>
-        <li><a data-target="sec5"><span class="year">2024</span><span class="title">Inconsistent Beliefs, Consistent Partisanship (2024)</span><span class="type">Pre-Print</span></a></li>
-        <li><a data-target="sec6"><span class="year">2024</span><span class="title">PhD Milestone 1</span><span class="type">Overview</span></a></li>
-        <li><a data-target="sec7"><span class="year">2023</span><span class="title">PhD Proposal</span><span class="type">Teaching</span></a></li>
-        <li><a data-target="sec8"><span class="year">2019</span><span class="title">Consulting Seminar</span><span class="type">Services</span></a></li>
-        <li><a data-target="sec9"><span class="year">2018</span><span class="title">Uncertainty Workshop</span><span class="type">Projects</span></a></li>
-        <li><a data-target="sec10"><span class="year">2017</span><span class="title">Modeling Review</span><span class="type">Publications</span></a></li>
-        <li><a data-target="sec11"><span class="year">2016</span><span class="title">Tutorial Series</span><span class="type">Teaching</span></a></li>
+        <!-- 2025 -->
+        <li><a data-target="sec-2025-llm-psych-relevance"><span class="year">2025</span><span class="title">Using a psychological method to increase performance of LLM for relevance judgement and ranking tasks</span><span class="type">Project</span></a></li>
+        <li><a data-target="sec-2025-every-idea-ever"><span class="year">2025</span><span class="title">Every Idea Ever /hr</span><span class="type">Web Art</span></a></li>
+        <li><a data-target="sec-2025-order-shapes-belief"><span class="year">2025</span><span class="title">When order shapes belief: sequence design for bounded agents</span><span class="type">Draft</span></a></li>
+        <li><a data-target="sec-2025-sensational-headlines"><span class="year">2025</span><span class="title">Sensational headlines impact evidence accumulation during veracity decisions through polarization</span><span class="type">Project</span></a></li>
+        <li><a data-target="sec-2025-accuracy-easier-latent-cause"><span class="year">2025</span><span class="title">Making accuracy easier: credibility perceptions as a latent cause assignment problem</span><span class="type">Draft</span></a></li>
+        <li><a data-target="sec-2025-confidence-seq-inference"><span class="year">2025</span><span class="title">Confidence as sequential inference: effects on misinformation susceptibility</span><span class="type">Project</span></a></li>
+        <li><a data-target="sec-2025-offgrid-online"><span class="year">2025</span><span class="title">Offgrid Online: Visualizing the Environmental Cost of Everyday Computation</span><span class="type">Web Art</span></a></li>
+        <li><a data-target="sec-2025-adms-automated-mobilities"><span class="year">2025</span><span class="title">ADM+S Symposium Sydney — Automated Mobilities</span><span class="type">Conference</span></a></li>
+        <li><a data-target="sec-2025-adms-automated-social-services"><span class="year">2025</span><span class="title">ADM+S Symposium — Automated social services: Building inclusive digital futures</span><span class="type">Conference</span></a></li>
+        <li><a data-target="sec-2025-neurophysiir-report"><span class="year">2025</span><span class="title">Report on the 3rd NeuroPhysIIR Workshop at SIGIR CHIIR 2025</span><span class="type">Publication</span></a></li>
+        <li><a data-target="sec-2025-neurophysiir-workshop"><span class="year">2025</span><span class="title">NeuroPhysIIR Workshop at ACM SIGIR CHIIR 2025</span><span class="type">Workshop</span></a></li>
+        <li><a data-target="sec-2025-papyrus"><span class="year">2025</span><span class="title">Papyrus: The Literature at Unit Scale</span><span class="type">Project</span></a></li>
+        <li><a data-target="sec-2025-poet-teaching"><span class="year">2025</span><span class="title">Semester 1 — Psychology of Everyday Thinking (1st year)</span><span class="type">Teaching</span></a></li>
+        <li><a data-target="sec-2025-dataset-sentiment-classifier"><span class="year">2025</span><span class="title">Dataset Sentiment Classifier for Experimental Stimuli</span><span class="type">Tool</span></a></li>
+        <li><a data-target="sec-2025-post-swirl"><span class="year">2025</span><span class="title">Post‑SWIRL’25 mini‑conference (following the 4th SWIRL)</span><span class="type">Conference</span></a></li>
+
+        <!-- 2024 -->
+        <li><a data-target="sec-2024-st-peter-says"><span class="year">2024</span><span class="title">St Peter Says…</span><span class="type">Web Art</span></a></li>
+        <li><a data-target="sec-2024-serial-position-auditory-ir"><span class="year">2024</span><span class="title">Leveraging the serial position effect to enhance auditory recall for voice‑only IR</span><span class="type">Project</span></a></li>
+        <li><a data-target="sec-2024-conflict-to-arbitration"><span class="year">2024</span><span class="title">From Conflict Detection to Arbitration in the Continued Influence Effect</span><span class="type">Draft</span></a></li>
+        <li><a data-target="sec-2024-sigir-ap"><span class="year">2024</span><span class="title">SIGIR‑AP 2024 — 2nd International ACM SIGIR Conference (Asia Pacific)</span><span class="type">Conference</span></a></li>
+        <li><a data-target="sec-2024-comp-complexity-workshop"><span class="year">2024</span><span class="title">Computational Complexity of Decision Making Workshop</span><span class="type">Workshop</span></a></li>
+        <li><a data-target="sec-2024-cog-psych"><span class="year">2024</span><span class="title">Semester 2 — Cognitive Psychology (2nd year)</span><span class="type">Teaching</span></a></li>
+        <li><a data-target="sec-2024-philosophy-methodology"><span class="year">2024</span><span class="title">Semester 1 — Philosophy & Methodology of Psychology (3rd year)</span><span class="type">Teaching</span></a></li>
+        <li><a data-target="sec-2024-phd-proposal"><span class="year">2024</span><span class="title">PhD Proposal — Impact of Information Environments on the Perception of Credibility</span><span class="type">PhD Proposal</span></a></li>
       </ul>
     </nav>
+
     <article id="content">
+      <!-- ABOUT -->
       <section id="about-section">
         <h2>About</h2>
         <p><strong>PhD Candidate at RMIT University &amp; the ARC Centre for Excellence in Automated Decision-Making and Society (ADM+S) | Sessional Tutor for Psychology</strong></p>
-        
         <p><strong>Computational Models of Cognition | Resource-Rational Sequential Learning | Human-Computer Interaction</strong></p>
-        
         <div class="bio-container">
           <div class="bio-text">
             <p>I research how people process information. My current interest is in how processing specifically applies to political messages, especially those designed to mislead or provoke strong emotions. Currently, I am mapping how the order and repetition of messages, such as what shows up first or later, as well as how ideas cluster over time, changes the mental effort people devote to evaluating claims. By pinpointing these moments, information systems could critically place nudges or fact-checks exactly where they can trigger closer scrutiny.</p>
-            
             <p>The approach is to assess how computational models can be used to infer users' real-time processing (e.g. how quickly they skim, when they slow down, and which cues grab their attention). Embedding a model of the learner into information platforms paves the way for adaptive systems that tailor corrections, explanations, or practice material to the moment a person is most receptive, turning generic facts into personalized learning aids.</p>
           </div>
-          
           <div class="bio-image">
-            <img src="headshot.png" alt="Fletcher Scott" class="headshot">
+            <img src="headshot.png" alt="Fletcher Scott" class="headshot" />
           </div>
         </div>
       </section>
 
-      <section id="sec15">
-        <h2>Every Idea Ever /Hr (2025)</h2>
-        <p>Visit <a href="https://everyideaever.fletcher-scott.com/" target="_blank" class="project-link">Every Idea Ever</a>, a website I built inspired by the <a href="http://en.wikipedia.org/wiki/Infinite_monkey_theorem" target="_blank" class="project-link">Infinite Monkey Theorem</a> and the <a href="https://libraryofbabel.info/" target="_blank" class="project-link">Library of Babel</a>. Each hour, a letters is iteratively added and fed into an LLM.</p>
+      <!-- 2025 CONTENT -->
+      <section id="sec-2025-llm-psych-relevance">
+        <h2>Using a psychological method to increase performance of LLM for relevance judgement and ranking tasks (2025)</h2>
+        <p><em>Summary and links coming soon.</em></p>
       </section>
 
-      <section id="sec1">
-        <h2>Statistical Learning in Noisy Feeds: How Information Environments Drive Attention, Memory, and Polarized Beliefs (2025)</h2>
-        <p>In the digital world, people often have to distinguish critical information from surrounding "noise", a task that is widely recognized as cognitively demanding. Here we argue that this is addressed by utilizing aspects of the human belief-updating system that evolved to simplify environmental inputs, but that it may have unintended consequences for exacerbating polarization and increasing susceptibility to misinformation. Modern information environments are frequently characterized by an overabundance of perspectives, most of which bear little practical relevance to their goals. The problem of determining credibility in such environments is that it must be solved by a limited cognitive system that evolved to infer and minimize the potential hidden causes for observed stimuli. We recast this problem within a latent-state framework to propose that sequenced, consistently patterned feeds on social media provide exactly the structured input that latent-cause mechanisms exploit, allowing users to infer hidden generative factors in the environment implicitly and carry those prior inferences into the perception of specific information items. Consequently, this perceptual fluency may mean that users give priority to messages marked by ingroup signals in a way that deepens partisan divides. Building on previous work linking the processing of social information to frameworks of resource-rational cognition, we argue that the answers to these questions have implications not just for the study of information processing. They are also significant for the development and broad awareness of the impacts of sequential recommender systems, and the role of personalized news feeds and fact-checking dashboards in in perceptions of credibility and belief-updating. This paper advances an empirical protocol for studying biased information use in dynamic, digitally mediated environments.</p>
+      <section id="sec-2025-every-idea-ever">
+        <h2>Every Idea Ever /hr (2025)</h2>
+        <p>Visit <a href="https://everyideaever.fletcher-scott.com/" target="_blank" class="project-link">Every Idea Ever</a>, a website I built inspired by the <a href="http://en.wikipedia.org/wiki/Infinite_monkey_theorem" target="_blank" class="project-link">Infinite Monkey Theorem</a> and the <a href="https://libraryofbabel.info/" target="_blank" class="project-link">Library of Babel</a>. Each hour, a <strong>letter</strong> is iteratively added and fed into an LLM.</p>
       </section>
 
-      <section id="sec2">
-        <h2>Papyrus Prototype (2025)</h2>
-        <p><strong> This is an ongoing project in collaboration with Jack Byrnes.</strong></p>
-        <p>The scholarly record is increasingly fragemented: more than four million peer-reviewed papers now appear each year, yet mismatched metadata, discipline-specific jargon, and paywalls hinder efficient discovery. When the volume of information volume overwhlems a finite capacity, researchers must either spend months undertaking cross-disciplinary syntheses or retreat into an ever-narrower niche, fueling professional fatigue and the well-documented reasoning errors that accompany cognitive overload.</p>
-        <p>We re-frame this crisis as a tractable machine-learning problem. Transformer-based language models embed full-text articles in a shared semantic space, while citation graphs add complementary topological cues. Together these representations can automatically surface convergent findings, flag near-replications, and spotlight neglected intersections. Each of these tasks currently overwhelm manual review. Layering an adaptive recommender that infers a reader's evolving goals yields the benefit of passive discovery of high-utility papers as well as an explicit push toward serendipity, both measurable with standard ranked-retrieval and diversity metrics.</p>
-        <p><em>Papyrus</em> is a desktop and mobile platform that atomises every article into fine-grained Units of Knowledge, or minimal, context-free propositions expressed in subject-predicate-object form. Each Unit inherits its parent article's embedding, enabling intra-paper summarisation and inter-paper synthesis through a two-stage pipeline (predicate-argument extraction followed by cosine-similarity clustering). Granularity adapts to expertise: novices see high-level explanatory Units, while domain experts receive technical Units that reveal citation pathways and unresolved contradictions.</p>
+      <section id="sec-2025-order-shapes-belief">
+        <h2>When order shapes belief: sequence design for bounded agents (2025)</h2>
+        <p><em>Summary, figures, and preregistration link coming soon.</em></p>
       </section>
 
-      <section id="sec3">
-        <h2>International Workshop on NeuroPhysiological Approaches for Interactive Information Retrieval (2025)</h2>
-        <p>Attended and participated in the report on the International Workshop on NeuroPhysiological Approaches for Interactive Information Retrieval at ACM SIGIR CHIIR 2025 (NeuroPhysIIR'25).</p>
+      <section id="sec-2025-sensational-headlines">
+        <h2>Sensational headlines impact evidence accumulation during veracity decisions through polarization (2025)</h2>
+        <p><em>Study description and materials coming soon.</em></p>
       </section>
 
-      <section id="sec4">
-        <h2>Semester 1: Psychology of Everyday Thinking (2025)</h2>
-        <p>Began tutoring the course Psychology of Everyday Thinking for the first time, at the City Campus of RMIT University.</p>
+      <section id="sec-2025-accuracy-easier-latent-cause">
+        <h2>Making accuracy easier: credibility perceptions as a latent cause assignment problem (2025)</h2>
+        <p>In the digital world, people often have to distinguish critical information from surrounding "noise", a task that is widely recognized as cognitively demanding. Here we argue that this is addressed by utilizing aspects of the human belief-updating system that evolved to simplify environmental inputs, but that it may have unintended consequences for exacerbating polarization and increasing susceptibility to misinformation. Modern information environments are frequently characterized by an overabundance of perspectives, most of which bear little practical relevance to their goals. The problem of determining credibility in such environments is that it must be solved by a limited cognitive system that evolved to infer and minimize the potential hidden causes for observed stimuli.</p>
+        <p>We recast this problem within a latent-state framework to propose that sequenced, consistently patterned feeds on social media provide exactly the structured input that latent-cause mechanisms exploit, allowing users to infer hidden generative factors in the environment implicitly and carry those prior inferences into the perception of specific information items. Consequently, this perceptual fluency may mean that users give priority to messages marked by ingroup signals in a way that deepens partisan divides. Building on previous work linking the processing of social information to frameworks of resource-rational cognition, we argue that the answers to these questions have implications not just for the study of information processing. They are also significant for the development and broad awareness of the impacts of sequential recommender systems, and the role of personalized news feeds and fact-checking dashboards in perceptions of credibility and belief-updating. This paper advances an empirical protocol for studying biased information use in dynamic, digitally mediated environments.</p>
       </section>
 
-      <section id="sec12">
-        <h2>Centering neurophysiological research in human–computer interaction on characterizing the binding of structure within and across tasks (2025)</h2>
-        <p>Although users commonly approach interactive systems with an articulated need, their interactions are continually influenced by underlying affective and motivational states. Moment‑to‑moment fluctuations in mood, arousal, and transient goals recruit large‑scale neural networks, subtly directing attention allocation and balancing exploratory versus exploitative information‑seeking behaviors, often prior to conscious awareness. Currently, human–computer interaction (HCI) research lacks robust behavioral or physiological indicators capable of pinpointing the onset of these internal states or quantifying their effects on information sampling decisions, thereby obscuring critical variance sources in user performance and satisfaction. This paper proposes that user actions are deeply contingent upon both the task environment and the cognitive models users construct about that environment, which together define the range of perceived appropriate actions. The constraints imposed by these task environments actively shape neural structure and activity patterns, influencing information processing. Conceptualizing HCI from the user's perspective as a resource‑rational predictive inference problem, we propose that the brain continually updates beliefs based on new experiences to predict future outcomes. However, the full set of decision‑process parameters driving task interaction is challenging to capture with behavioral data alone. By integrating well‑characterized neurophysiological signatures of decision formation, we present a comprehensive framework that both constructs and constrains decision models. This approach highlights a critical consideration: determining whether task adaptation occurs primarily within the brain or within the task environment itself carries significant implications for cognitive neuroscience methodologies and their application in optimizing HCI.</p>
+      <section id="sec-2025-confidence-seq-inference">
+        <h2>Confidence as sequential inference: effects on misinformation susceptibility (2025)</h2>
+        <p><em>Overview and preregistration link coming soon.</em></p>
       </section>
 
-      <section id="sec13">
-        <h2>EngineEarth.io (2025)</h2>
-        <p>EarthEngine.io is a browser extension that visualizes the environmental cost of everyday digital activity. Every time a user searches the web or uses AI tools, it impacts a digital forest, trees are cut down, and a furnace burns, measuring the energy and environmental resources consumed. The forest reflects a user's digital footprint in real time. But users are also empowered to counteract this by donating to ecological charities, and so they can regenerate their forest and watch trees grow back, skies clear, and wildlife return. This project acts as a participatory artwork, interactive data visualizer, and behavioural feedback tool. EarthEngine.io visualizes emissions and ties restoration to everyday behaviour. The result is a responsive forest that makes people's environmental data personal and changeable.</p>
+      <section id="sec-2025-offgrid-online">
+        <h2>Offgrid Online: Visualizing the Environmental Cost of Everyday Computation (2025)</h2>
+        <p>Offgrid Online is a browser extension that visualizes the environmental cost of everyday digital activity. Every time a user searches the web or uses AI tools, it impacts a digital forest, trees are cut down, and a furnace burns, measuring the energy and environmental resources consumed. The forest reflects a user's digital footprint in real time. But users are also empowered to counteract this by donating to ecological charities, and so they can regenerate their forest and watch trees grow back, skies clear, and wildlife return. This project acts as a participatory artwork, interactive data visualizer, and behavioural feedback tool. Offgrid Online visualizes emissions and ties restoration to everyday behaviour. The result is a responsive forest that makes people's environmental data personal and changeable.</p>
         <p>"I love gardening. It's great to walk out every day and see the little changes around me. But I'm also forgetful. It's really easy to forget. The day goes by so quickly, and there's always something more important right there in my face, so the little things get delayed over and over. I don't water my plants. I don't check the soil.</p>
         <p>I'm realizing it might be because the garden grows at a pace I simply don't live on. It's like when a slow driver is there in the right lane, and they're going the speed limit, but I still feel that anger in me, like they're personally trying to delay me from a pace that I defined. The garden is the same. Its so slow and I want results at the moment I want them.</p>
         <p>It reminds while I'm writing this. I want to be more kind. I want to be a better person. I'm fighting every day to be better, fighting myself and other people. I get so confronted and offended when things are different from how I want them to be. I kick and I scream and I think, "other people would stomp on me if they had the chance to get ahead". What am I doing? There I see a scared, vulnerable person.</p>
@@ -223,47 +197,104 @@
         <p>I want to honour that person driving slow and the old lady fumbling with her coins and looking the cashier straight in the eye. I don't want our acquisition of skills to plan for the obsolescence of basic kindness and the quiet million-year long process of which we are all a part of. This is my round-about way of saying that I wanted to present an attempt at slowing things down, which I believe people need, including myself. Here's a garden for you. And when you tend to that garden, I want you to ask: what would it have meant to wake up with the rain pooling in your eyes, the fresh moisture on your skin and the smell of the forest on your nose. I ache to know myself, I have ached perhaps for 2000 years or more. But maybe we are far from that now." – Artist Statement</p>
       </section>
 
-      <section id="sec14">
-        <h2>Dataset Sentiment Classifier for Experimental Stimuli</h2>
+      <section id="sec-2025-adms-automated-mobilities">
+        <h2>ADM+S Symposium Sydney — Automated Mobilities (2025)</h2>
+        <figure>
+          <!-- TODO: replace with your actual image path -->
+          <img src="assets/adms-automated-mobilities.jpg" alt="ADM+S Symposium Sydney — Automated Mobilities" />
+          <figcaption>ADM+S Symposium Sydney — Automated Mobilities.</figcaption>
+        </figure>
+        <p><em>Brief summary and link coming soon.</em></p>
+      </section>
+
+      <section id="sec-2025-adms-automated-social-services">
+        <h2>ADM+S Symposium — Automated social services: Building inclusive digital futures (2025)</h2>
+        <p><em>Brief summary, panel details, and links coming soon.</em></p>
+      </section>
+
+      <section id="sec-2025-neurophysiir-report">
+        <h2>Report on the 3rd Workshop on NeuroPhysIIR 2025 at SIGIR CHIIR 2025 (Publication)</h2>
+        <p><em>Preprint/DOI and author list coming soon.</em></p>
+      </section>
+
+      <section id="sec-2025-neurophysiir-workshop">
+        <h2>NeuroPhysIIR Workshop at ACM SIGIR CHIIR 2025 (Workshop)</h2>
+        <p>Attended and participated in the report on the International Workshop on NeuroPhysiological Approaches for Interactive Information Retrieval at ACM SIGIR CHIIR 2025 (NeuroPhysIIR'25).</p>
+      </section>
+
+      <section id="sec-2025-papyrus">
+        <h2>Papyrus: The Literature at Unit Scale (2025)</h2>
+        <p><strong>This is an ongoing project in collaboration with Jack Byrnes.</strong></p>
+        <p>The scholarly record is increasingly fragmented: more than four million peer‑reviewed papers now appear each year, yet mismatched metadata, discipline‑specific jargon, and paywalls hinder efficient discovery. When the volume of information overwhelms a finite capacity, researchers must either spend months undertaking cross‑disciplinary syntheses or retreat into an ever‑narrower niche, fueling professional fatigue and the well‑documented reasoning errors that accompany cognitive overload.</p>
+        <p>We re‑frame this crisis as a tractable machine‑learning problem. Transformer‑based language models embed full‑text articles in a shared semantic space, while citation graphs add complementary topological cues. Together these representations can automatically surface convergent findings, flag near‑replications, and spotlight neglected intersections. Each of these tasks currently overwhelm manual review. Layering an adaptive recommender that infers a reader's evolving goals yields the benefit of passive discovery of high‑utility papers as well as an explicit push toward serendipity, both measurable with standard ranked‑retrieval and diversity metrics.</p>
+        <p><em>Papyrus</em> is a desktop and mobile platform that atomises every article into fine‑grained Units of Knowledge, or minimal, context‑free propositions expressed in subject‑predicate‑object form. Each Unit inherits its parent article's embedding, enabling intra‑paper summarisation and inter‑paper synthesis through a two‑stage pipeline (predicate‑argument extraction followed by cosine‑similarity clustering). Granularity adapts to expertise: novices see high‑level explanatory Units, while domain experts receive technical Units that reveal citation pathways and unresolved contradictions.</p>
+      </section>
+
+      <section id="sec-2025-poet-teaching">
+        <h2>Semester 1: Psychology of Everyday Thinking (1st year subject) — 2025</h2>
+        <p>Began tutoring the course Psychology of Everyday Thinking for the first time, at the City Campus of RMIT University.</p>
+      </section>
+
+      <section id="sec-2025-dataset-sentiment-classifier">
+        <h2>Dataset Sentiment Classifier for Experimental Stimuli (2025)</h2>
         <p>A new protocol is emerging in misinformation research that aims to improve the rigor of stimulus design. But pretesting statements for emotional or categorical content is often costly and places an undue burden on participants, who have to repeatedly evaluate large sets of stimuli simply to verify that they meet predefined criteria.</p>
         <p>As a preliminary solution, machine learning offers a promising route for approximating human-like text perceptions. I've developed a simple tool on Kaggle that allows researchers to upload a dataset of statements and receive outputs categorizing each one by emotional sentiment and its intensity. Essentially, it serves as a user-friendly interface for psychological researchers without a technical background, providing access to a sentiment classifier without requiring extensive coding.</p>
         <p>Warning: this method has not yet been validated against established psychological measures at the time of writing. Perhaps a future PhD project could take this further? Someone, pick it up!</p>
         <p><a href="https://www.kaggle.com/code/fletcherscott/statement-sentiment-classifier" target="_blank" class="project-link">Access the tool on Kaggle</a></p>
       </section>
 
-      <section id="sec5">
-        <h2>Inconsistent Beliefs, Consistent Partisanship (2024)</h2>
-        <p>Description.</p>
+      <section id="sec-2025-post-swirl">
+        <h2>Post‑SWIRL’25 mini‑conference (following the 4th SWIRL) — 2025</h2>
+        <figure>
+          <!-- TODO: replace with your actual image path -->
+          <img src="assets/post-swirl-25.jpg" alt="Post‑SWIRL’25 mini conference" />
+          <figcaption>Post‑SWIRL’25 mini‑conference.</figcaption>
+        </figure>
+        <p><em>Brief recap and links coming soon.</em></p>
       </section>
-      <section id="sec6">
-        <h2>PhD Milestone 1 (2025)</h2>
-        <p>Description.</p>
+
+      <!-- 2024 CONTENT -->
+      <section id="sec-2024-st-peter-says">
+        <h2>St Peter Says… (2024)</h2>
+        <p><em>Project statement and link coming soon.</em></p>
       </section>
-      <section id="sec7">
-        <h2>PhD Proposal (2023)</h2>
+
+      <section id="sec-2024-serial-position-auditory-ir">
+        <h2>Leveraging the serial position effect to enhance auditory recall for voice‑only information retrieval (2024)</h2>
+        <p><em>Prototype description and evaluation plan coming soon.</em></p>
+      </section>
+
+      <section id="sec-2024-conflict-to-arbitration">
+        <h2>From Conflict Detection to Arbitration in the Continued Influence Effect of Misinformation (2024)</h2>
+        <p><em>Draft abstract and figures coming soon.</em></p>
+      </section>
+
+      <section id="sec-2024-sigir-ap">
+        <h2>SIGIR‑AP 2024 — 2nd International ACM SIGIR Conference on Information Retrieval in the Asia Pacific</h2>
+        <p><em>Talk/poster details and link coming soon.</em></p>
+      </section>
+
+      <section id="sec-2024-comp-complexity-workshop">
+        <h2>Computational Complexity of Decision Making Workshop (2024)</h2>
+        <p><em>Workshop notes and resources coming soon.</em></p>
+      </section>
+
+      <section id="sec-2024-cog-psych">
+        <h2>Semester 2: Cognitive Psychology (2nd year subject) — 2024</h2>
+        <p><em>Unit overview and sample activity coming soon.</em></p>
+      </section>
+
+      <section id="sec-2024-philosophy-methodology">
+        <h2>Semester 1: Philosophy &amp; Methodology of Psychology (3rd year subject) — 2024</h2>
+        <p><em>Unit overview and materials coming soon.</em></p>
+      </section>
+
+      <section id="sec-2024-phd-proposal">
+        <h2>PhD Proposal — Impact of Information Environments on the Perception of Credibility (2024)</h2>
         <p>Relevance and credibility are shaped by the information environments people inhabit and the noise they encounter. Information environments range from feeds that consistently surprise the user to those that consistently affirm them, each altering attention and memory systems in distinct ways. Previous research has shown that noise, defined as inconsistent or distracting information, can disrupt attention, increase cognitive load, and reduce efficiency.</p>
-
         <p>As algorithms increasingly become the main source of information globally, it is essential to investigate how the structure these algorithms impose on information affects the way individuals maintain and revise their beliefs, accounting for the varying presence of noise in these feeds. Understanding how these varying environments impact perception is key to unraveling the cognitive and neural mechanisms involved in human-information interaction.</p>
-
         <p>The primary aim of this topic is to explore the relationship between different information environments and their impact on perceptions of credibility. Specifically, it seeks to investigate how various sequences affect information processing and beliefs regarding the specific information being sequenced. This is to examine the potentially disruptive effects of noise during credibility judgements and maintenance of states of cognitive control.</p>
-
         <p>Previous research has revealed adaptive strategies employed by the meta-cognitive system in noisy environments. But as of yet, it is unknown whether these strategies are also utilized in algorithmically sequenced news information, potentially explaining key findings in studies of misinformation and the susceptibility of people to polarized narratives when such narratives confirm existing beliefs. These investigations seek to contribute to the body of literature tasked with developing strategies to moderate credibility perception in diverse information settings.</p>
-      </section>
-      <section id="sec8">
-        <h2>Consulting Seminar (2019)</h2>
-        <p>Advised industry partners on decision-theoretic user data analysis techniques.</p>
-      </section>
-      <section id="sec9">
-        <h2>Uncertainty Workshop (2018)</h2>
-        <p>Co-led an international workshop on uncertainty quantification in cognitive models.</p>
-      </section>
-      <section id="sec10">
-        <h2>Modeling Review (2017)</h2>
-        <p>Published a comprehensive review on cognitive modeling approaches, focusing on sequential sampling.</p>
-      </section>
-      <section id="sec11">
-        <h2>Tutorial Series (2016)</h2>
-        <p>Delivered tutorials on Bayesian analysis for psychology researchers, covering R and Python implementations.</p>
       </section>
     </article>
   </main>
@@ -275,7 +306,8 @@
         linkedin: Fletcher Scott |
         twitter: @fletcher_sc0 |
         bluesky: @fletcherscott.bsky.social |
-        join ACID mailing list: <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNH8KUt9CkdDfYhe7f6Bre_qRmgEjIGwXv3l17MYV3YAKFvw/viewform?usp=dialog" style="color: inherit; text-decoration: none;">[here]</a>
+        join ACID mailing list:
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNH8KUt9CkdDfYhe7f6Bre_qRmgEjIGwXv3l17MYV3YAKFvw/viewform?usp=dialog" style="color: inherit; text-decoration: none;">[here]</a>
       </span>
     </div>
     <button class="toggler" id="mode-toggle" aria-label="Toggle light/dark mode">⋆ ⁺  ₊  ⋆    ☾    ⋆  ⁺  ₊ ⋆</button>
@@ -316,5 +348,3 @@
   </script>
 </body>
 </html>
-
-
