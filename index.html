@@ -81,11 +81,9 @@
     #about-section p { margin-bottom: 1.5em; }
     article section p { margin-bottom: 1.5em; }
 
-    /* Bio layout with image */
-    .bio-container { display: flex; margin: 1.5em 0; gap: 2em; }
-    .bio-text { flex: 3; }
-    .bio-image { flex: 1; display: flex; justify-content: flex-end; align-items: flex-start; }
-    .headshot { width: 180px; height: auto; border-radius: 5px; }
+    /* Headshot (centered between taglines) */
+    .about-headshot { display: flex; justify-content: center; }
+    .headshot { width: 180px; height: auto; border-radius: 5px; display: block; margin: 1rem auto; }
 
     /* Link styling */
     a.project-link {
@@ -138,17 +136,20 @@
       <section id="about-section">
         <h2>About</h2>
         <p><strong>PhD Candidate at RMIT University &amp; the ARC Centre for Excellence in Automated Decision-Making and Society (ADM+S) | ADM+S Australian Search Experience 2.0 | Sessional Tutor for Psychology</strong></p>
+
+        <!-- Headshot centered between taglines -->
+        <div class="about-headshot">
+          <img src="headshot.png" alt="Fletcher Scott" class="headshot" />
+        </div>
+
         <p><strong>Computational Models of Cognition | Resource-Rational Sequential Learning | Human-Computer Interaction</strong></p>
-        <div class="bio-container">
-          <div class="bio-text">
-            <p>The goal of my research is to understand how people learn and revise beliefs when time, attention, and computation are limited, and to use this understanding to design learning-optimal sequences of information. I compare cases when learners begin with similar versus varied prior beliefs, asking how these starting points shape what ordering of items produces the greatest learning with the least effort.</p>
-            <p>My current case study is political messages and news items, especially content that can mislead or provoke strong emotion. Using large-scale online experiments, I manipulate sequence features and measure when people shift their level of attention from intuitive judgments to focused deliberation, and how beliefs change in response.</p>
-            <p>To do so, we define computational models that compute an exposure history and use it to adjust the influence of each cue on later judgements. The hypothesis is that such models can capture human behaviour because people are resource-rational when making inferences about credibility. People want to attain a strategy that functions well across information environments and so they achieve this by storing coarse predictive categories, utilized when the context is unclear. The noteworthy problem is that these coarse representations appear to regard stereotypes about the speaker, their motivations and what political or social groups they belong to.</p>
-            <p>The problem this addresses relates to the fact that algorithmic feeds now structure much of human information access. Different feeds expose people to different statistical environments, including those that frequently surprise to those that consistently affirm. These environments evidently modulate attention and memory, and noise (inconsistency, distraction, or volatility), and, in a way that we do not currently understand, increase cognitive load and degrade efficiency. We formalize these environments under a set of rules, with the aim of embedding learner models into information systems and enable adaptive placement of corrections or explanations at their most effective moment.</p>
-          </div>
-          <div class="bio-image">
-            <img src="headshot.png" alt="Fletcher Scott" class="headshot" />
-          </div>
+
+        <!-- Single-column bio text -->
+        <div class="bio-text">
+          <p>The goal of my research is to understand how people learn and revise beliefs when time, attention, and computation are limited, and to use this understanding to design learning-optimal sequences of information. I compare cases when learners begin with similar versus varied prior beliefs, asking how these starting points shape what ordering of items produces the greatest learning with the least effort.</p>
+          <p>My current case study is political messages and news items, especially content that can mislead or provoke strong emotion. Using large-scale online experiments, I manipulate sequence features and measure when people shift their level of attention from intuitive judgments to focused deliberation, and how beliefs change in response.</p>
+          <p>To do so, we define computational models that compute an exposure history and use it to adjust the influence of each cue on later judgements. The hypothesis is that such models can capture human behaviour because people are resource-rational when making inferences about credibility. People want to attain a strategy that functions well across information environments and so they achieve this by storing coarse predictive categories, utilized when the context is unclear. The noteworthy problem is that these coarse representations appear to regard stereotypes about the speaker, their motivations and what political or social groups they belong to.</p>
+          <p>The problem this addresses relates to the fact that algorithmic feeds now structure much of human information access. Different feeds expose people to different statistical environments, including those that frequently surprise to those that consistently affirm. These environments evidently modulate attention and memory, and noise (inconsistency, distraction, or volatility), and, in a way that we do not currently understand, increase cognitive load and degrade efficiency. We formalize these environments under a set of rules, with the aim of embedding learner models into information systems and enable adaptive placement of corrections or explanations at their most effective moment.</p>
         </div>
       </section>
 
@@ -364,18 +365,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
